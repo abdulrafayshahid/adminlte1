@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\FormController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +32,10 @@ Route::middleware('auth')->group(function () {
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
 });
 
-Route::view('admin','admin.dashboard');
-
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+Route::get('/form', function () {
+    return view('admin.form');
+});
+Route::post('/submit-form', [FormController::class, 'show']);
