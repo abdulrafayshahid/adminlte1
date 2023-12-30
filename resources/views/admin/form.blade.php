@@ -935,7 +935,7 @@
                         <input class="ml-5" type="text" id="address" name="address" required>
                     </div>
                     <div class="form-group">
-                        <label for="contact">Contact Number:</label>
+                        <label for="contact">Number:</label>
                         <input class="ml-5" type="text" id="contact" name="number" required> <!-- Updated name attribute -->
                     </div>
                     <button type="submit">Submit</button>
